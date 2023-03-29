@@ -224,9 +224,9 @@ internal sealed class WizardDeadMaster : AbstractSubclass
                 {
                     >= 15 => 24 * 60,
                     >= 13 => 8 * 60,
-                    >= 9 => 60,
-                    >= 5 => 10,
-                    _ => 1
+                    >= 9 => 8,
+                    >= 5 => 8,
+                    _ => 8
                 };
 
                 var createDeadSpell = SpellDefinitionBuilder
@@ -240,8 +240,8 @@ internal sealed class WizardDeadMaster : AbstractSubclass
                     .SetCastingTime(ActivationTime.Action)
                     .SetEffectDescription(EffectDescriptionBuilder.Create()
                         .SetTargetingData(Side.All, RangeType.Distance, 6, TargetType.Position, count)
-                        .SetDurationData(DurationType.Minute, duration)
-                        .SetEffectAdvancement(EffectIncrementMethod.PerAdditionalSlotLevel, 2,
+                        .SetDurationData(DurationType.Hour, duration)
+                        .SetEffectAdvancement(EffectIncrementMethod.PerAdditionalSlotLevel, 1,
                             additionalSummonsPerIncrement: 1)
                         .SetParticleEffectParameters(VampiricTouch)
                         .SetEffectForms(EffectFormBuilder.Create()
@@ -312,7 +312,7 @@ internal sealed class WizardDeadMaster : AbstractSubclass
 
         public int OnlyWithUpcastGreaterThan()
         {
-            return 1;
+            return 0;
         }
     }
 

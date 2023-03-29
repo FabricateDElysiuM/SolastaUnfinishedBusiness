@@ -25,6 +25,7 @@ internal static class MeleeCombatFeats
 {
     internal static void CreateFeats([NotNull] List<FeatDefinition> feats)
     {
+        var featFastHands = BuildFastHandsFeat();
         var featBladeMastery = BuildBladeMastery();
         var featCleavingAttack = BuildCleavingAttack();
         var featCrusherStr = BuildCrusherStr();
@@ -42,6 +43,7 @@ internal static class MeleeCombatFeats
         var featSpearMastery = BuildSpearMastery();
 
         feats.AddRange(
+            featFastHands,
             featBladeMastery,
             featCleavingAttack,
             featCrusherStr,
@@ -82,6 +84,7 @@ internal static class MeleeCombatFeats
             FeatDefinitions.DauntingPush,
             FeatDefinitions.DistractingGambit,
             FeatDefinitions.TripAttack,
+            featFastHands,
             featBladeMastery,
             featCleavingAttack,
             featDefensiveDuelist,
@@ -94,6 +97,20 @@ internal static class MeleeCombatFeats
             featGroupCrusher,
             featGroupSlasher);
     }
+
+    #region Fast Hands
+
+    private static FeatDefinition BuildFastHandsFeat()
+    {
+        return FeatDefinitionWithPrerequisitesBuilder
+            .Create("FeatFastHands")
+            .SetAbilityScorePrerequisite(AttributeDefinitions.Dexterity, 13)
+            .SetGuiPresentation(Category.Action)
+            .SetFeatures(ActionAffinityThiefFastHands)
+            .AddToDB();
+    }
+
+    #endregion
 
     #region Defensive Duelist
 

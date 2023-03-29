@@ -213,6 +213,7 @@
   </SubclassEnabled>
   <FeatSliderPosition>4</FeatSliderPosition>
   <FeatEnabled>
+    <string>FeatFastHands</string>
     <string>FeatApothecaryCha</string>
     <string>FeatApothecaryInt</string>
     <string>FeatApothecaryWis</string>

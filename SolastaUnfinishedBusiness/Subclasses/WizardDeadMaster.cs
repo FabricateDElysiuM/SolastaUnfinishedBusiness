@@ -157,15 +157,15 @@ internal sealed class WizardDeadMaster : AbstractSubclass
                     )>>
             {
                 {
-                    (3, 2), new()
+                    (2, 1), new()
                     {
-                        (Skeleton, 1, Sprites.SpellRaiseSkeleton, new BaseDefinition[] { Scimitar }),
+                        (Zombie, 1, Sprites.SpellRaiseSkeleton, new BaseDefinition[] { MonsterAttackDefinitions.Attack_Wildshape_GiantEagle_Talons }),
                         (Skeleton_Archer, 1, Sprites.SpellRaiseSkeletonArcher,
                             new BaseDefinition[] { Shortbow, Shortsword })
                     }
                 }, //CR 0.25 x2
                 {
-                    (5, 3), new()
+                    (3, 2), new()
                     {
                         (Ghoul, 1, Sprites.SpellRaiseGhoul,
                             new BaseDefinition[]
@@ -176,30 +176,26 @@ internal sealed class WizardDeadMaster : AbstractSubclass
                     }
                 }, //CR 1
                 {
-                    (7, 4), new()
+                    (5, 3), new()
                     {
                         (Skeleton_Enforcer, 1, Sprites.SpellRaiseSkeletonEnforcer,
-                            new BaseDefinition[] { Battleaxe, MonsterAttackDefinitions.Attack_Wildshape_Ape_Toss_Rock })
+                            new BaseDefinition[] { Battleaxe, MonsterAttackDefinitions.Attack_Wildshape_Ape_Toss_Rock }), (Ghast, 1, Sprites.SpellRaiseGhoul, new BaseDefinition[] { MonsterAttackDefinitions.Attack_Wildshape_GiantEagle_Talons, MonsterAttackDefinitions.Attack_Wildshape_Wolf_Bite })
                     }
                 }, //CR 2
                 {
-                    (9, 5), new()
+                    (7, 4), new()
                     {
                         (Skeleton_Knight, 1, Sprites.SpellRaiseSkeletonKnight, new BaseDefinition[] { Longsword }),
                         (Skeleton_Marksman, 1, Sprites.SpellRaiseSkeletonMarksman,
-                            new BaseDefinition[] { Longbow, Shortsword })
+                            new BaseDefinition[] { Longbow, Shortsword }), (Skeleton_Sorcerer, 1, Sprites.SpellRaiseWight, new BaseDefinition[] { Quarterstaff })
                     }
                 }, //CR 3
                 {
-                    (11, 6),
-                    new() { (Ghost, 1, Sprites.SpellRaiseGhost, new BaseDefinition[] { Enchanted_Dagger_Souldrinker }) }
-                }, //CR 4
-                {
-                    (13, 7),
-                    new() { (Wight, 1, Sprites.SpellRaiseWight, new BaseDefinition[] { LongswordPlus2, LongbowPlus1 }) }
+                    (9, 5),
+                    new() { (Wraith, 1, Sprites.SpellRaiseGhost, new BaseDefinition[] { Enchanted_Dagger_Souldrinker }), (Brood_of_flesh, 1, Sprites.SpellRaiseSkeleton, new BaseDefinition[] { MonsterAttackDefinitions.Attack_Wildshape_GiantEagle_Talons, MonsterAttackDefinitions.Attack_Wildshape_Wolf_Bite }) }
                 }, //CR 3 x2
                 {
-                    (15, 8), new()
+                    (11, 6), new()
                     {
                         (WightLord, 1, Sprites.SpellRaiseWightLord,
                             new BaseDefinition[] { Enchanted_Longsword_Frostburn, Enchanted_Shortbow_Medusa })

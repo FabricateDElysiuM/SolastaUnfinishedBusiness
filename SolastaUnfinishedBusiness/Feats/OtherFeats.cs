@@ -398,7 +398,7 @@ internal static class OtherFeats
                     .SetModifier(
                         FeatureDefinitionAttributeModifier.AttributeModifierOperation.Additive,
                         AttributeDefinitions.SorceryPoints,
-                        2)
+                        6)
                     .AddToDB(),
                 FeatureDefinitionPointPoolBuilder
                     .Create("PointPoolFeatMetamagicAdept")

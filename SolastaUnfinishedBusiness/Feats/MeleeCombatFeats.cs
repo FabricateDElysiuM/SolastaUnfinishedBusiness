@@ -84,7 +84,6 @@ internal static class MeleeCombatFeats
             FeatDefinitions.DauntingPush,
             FeatDefinitions.DistractingGambit,
             FeatDefinitions.TripAttack,
-            featFastHands,
             featBladeMastery,
             featCleavingAttack,
             featDefensiveDuelist,

@@ -180,7 +180,9 @@
   </SubclassEnabled>
   <FeatSliderPosition>4</FeatSliderPosition>
   <FeatEnabled>
-    <string>FeatApothecaryCha</string>
+	<string>FeatRevenantMaulDex</string>
+	<string>FeatFastHands</string>
+	<string>FeatApothecaryCha</string>
     <string>FeatApothecaryInt</string>
     <string>FeatApothecaryWis</string>
     <string>FeatArcaneDefense</string>
@@ -286,7 +288,8 @@
   </FeatEnabled>
   <FeatGroupSliderPosition>4</FeatGroupSliderPosition>
   <FeatGroupEnabled>
-    <string>FeatGroupAlchemist</string>
+	<string>FeatGroupRevenantMaul</string>
+	<string>FeatGroupAlchemist</string>
     <string>FeatGroupApothecary</string>
     <string>FeatGroupArmor</string>
     <string>FeatGroupBodyResilience</string>

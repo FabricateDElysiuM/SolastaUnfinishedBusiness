@@ -98,3 +98,5 @@ Feat/&FeatGroupPotentSpellcasterDescription=You can add your spellcaster attribu
 Feat/&FeatGroupPotentSpellcasterTitle=Potent Spellcaster
 Feat/&FeatGroupBlessedSoulDescription=Your use of divine magic has left a spiritual mark on your soul, allowing you to express your faith more frequently. Increase your Charisma or Wisdom score by 1, to a maximum of 20. You gain one additional Channel Divinity usage between rests.
 Feat/&FeatGroupBlessedSoulTitle=Blessed Soul
+Feat/&FeatGroupVerdantTouchedDescription=Increase one of your mental attributes by 1, to a maximum of 20.\nYou gain the ability to cast the barkskin, entangle, and goodberry spells once per long rest and you can cast these spells with your spell slots.
+Feat/&FeatGroupVerdantTouchedTitle=Verdant Touched

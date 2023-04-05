@@ -934,7 +934,7 @@ internal static class CharacterContext
 
     internal static void SwitchFighterArmamentAdroitness()
     {
-        var levels = new[] { 8, 16 };
+        var levels = new[] { 2, 6, 10, 14 };
 
         if (Main.Settings.EnableFighterArmamentAdroitness)
         {

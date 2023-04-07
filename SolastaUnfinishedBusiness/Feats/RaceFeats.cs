@@ -17,6 +17,7 @@ namespace SolastaUnfinishedBusiness.Feats;
 
 internal static class RaceFeats
 {
+    private const string RevenantMaul = "RevenantMaul";
     private const string ElvenPrecision = "ElvenPrecision";
     private const string FadeAway = "FadeAway";
     private const string RevenantGreatSword = "RevenantGreatSword";
@@ -131,6 +132,39 @@ internal static class RaceFeats
             .AddToDB();
 
         //
+        // Revenant Maul support
+        //
+
+        var validMaulWeapon = ValidatorsWeapon.IsOfWeaponType(MaulType);
+
+        var attributeModifierFeatRevenantMaulArmorClass = FeatureDefinitionAttributeModifierBuilder
+            .Create("AttributeModifierFeatRevenantMaulArmorClass")
+            .SetGuiPresentation(Category.Feature)
+            .SetModifier(FeatureDefinitionAttributeModifier.AttributeModifierOperation.Additive,
+                AttributeDefinitions.ArmorClass, 1)
+            .SetSituationalContext(ExtraSituationalContext.HasMaulInHands)
+            .AddToDB();
+
+        var modifyAttackModeFeatRevenantMaul = FeatureDefinitionBuilder
+            .Create("ModifyAttackModeFeatRevenantMaul")
+            .SetGuiPresentationNoContent(true)
+            .SetCustomSubFeatures(
+                new AddTagToWeapon(TagsDefinitions.WeaponTagFinesse, TagsDefinitions.Criticity.Important, validMaulWeapon))
+            .AddToDB();
+
+        // Revenant Maul (Dexterity)
+        var featRevenantMaulDex = FeatDefinitionWithPrerequisitesBuilder
+            .Create("FeatRevenantMaulDex")
+            .SetGuiPresentation(Category.Feat)
+            .SetFeatures(
+                AttributeModifierCreed_Of_Misaye,
+                attributeModifierFeatRevenantMaulArmorClass,
+                modifyAttackModeFeatRevenantMaul)
+            .SetValidators(ValidatorsFeat.IsElfOfHalfElf)
+            .SetFeatFamily(RevenantMaul)
+            .AddToDB();
+
+        //
         // Revenant support
         //
 
@@ -213,6 +247,7 @@ internal static class RaceFeats
         //
 
         feats.AddRange(
+            featRevenantMaulDex,
             featDragonWings,
             featFadeAwayDex,
             featFadeAwayInt,
@@ -241,6 +276,12 @@ internal static class RaceFeats
             featFadeAwayDex,
             featFadeAwayInt);
 
+        var featGroupRevenantMaul = GroupFeats.MakeGroupWithPreRequisite(
+            "FeatGroupRevenantMaul",
+            RevenantMaul,
+            ValidatorsFeat.IsElfOfHalfElf,
+            featRevenantMaulDex);
+
         var featGroupRevenantGreatSword = GroupFeats.MakeGroupWithPreRequisite(
             "FeatGroupRevenantGreatSword",
             RevenantGreatSword,
@@ -259,9 +300,10 @@ internal static class RaceFeats
 
         GroupFeats.FeatGroupDefenseCombat.AddFeats(featGroupFadeAway);
 
-        GroupFeats.FeatGroupTwoHandedCombat.AddFeats(featGroupRevenantGreatSword);
+        GroupFeats.FeatGroupTwoHandedCombat.AddFeats(featGroupRevenantGreatSword, featGroupRevenantMaul);
 
         GroupFeats.MakeGroup("FeatGroupRaceBound", null,
+            featGroupRevenantMaul,
             featDragonWings,
             featGroupsElvenAccuracy,
             featGroupFadeAway,

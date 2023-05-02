@@ -17,7 +17,6 @@ internal static class CriticalVirtuosoFeats
             .SetGuiPresentation("MartialChampionImprovedCritical", Category.Feature)
             .SetFeatures(AttributeModifierMartialChampionImprovedCritical)
             .SetValidators(
-                ValidatorsFeat.IsLevel4,
                 ValidatorsFeat.ValidateNotFeature(AttributeModifierMartialChampionImprovedCritical))
             .AddToDB();
 
@@ -27,7 +26,6 @@ internal static class CriticalVirtuosoFeats
             .SetGuiPresentation("MartialChampionSuperiorCritical", Category.Feature)
             .SetFeatures(AttributeModifierMartialChampionSuperiorCritical)
             .SetValidators(
-                ValidatorsFeat.IsLevel16,
                 ValidatorsFeat.ValidateHasFeature(AttributeModifierMartialChampionImprovedCritical),
                 ValidatorsFeat.ValidateNotFeature(AttributeModifierMartialChampionSuperiorCritical))
             .AddToDB();

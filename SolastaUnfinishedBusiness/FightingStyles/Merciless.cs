@@ -9,6 +9,7 @@ using SolastaUnfinishedBusiness.CustomInterfaces;
 using SolastaUnfinishedBusiness.CustomUI;
 using SolastaUnfinishedBusiness.CustomValidators;
 using SolastaUnfinishedBusiness.Properties;
+using static SolastaUnfinishedBusiness.Api.DatabaseHelper.FeatureDefinitionAdditionalActions;
 using static SolastaUnfinishedBusiness.Api.DatabaseHelper.FeatureDefinitionFightingStyleChoices;
 using static RuleDefinitions;
 
@@ -33,6 +34,10 @@ internal sealed class Merciless : AbstractFightingStyle
         .Create("Merciless")
         .SetGuiPresentation(Category.FightingStyle, Sprites.GetSprite("Merciless", Resources.Merciless, 256))
         .SetFeatures(
+                 FeatureDefinitionAdditionalActionBuilder
+                .Create(AdditionalActionHunterHordeBreaker, "AdditionalActionFightingStyleMerciless")
+                .SetGuiPresentationNoContent(true)
+                .AddToDB(),
             FeatureDefinitionBuilder
                 .Create("TargetReducedToZeroHpFightingStyleMerciless")
                 .SetGuiPresentationNoContent(true)

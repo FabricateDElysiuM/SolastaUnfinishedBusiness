@@ -355,7 +355,7 @@ internal static class ClassFeats
             return;
         }
 
-        __result = ActionDefinitions.ActionStatus.CannotPerform;
+        __result = ActionDefinitions.ActionStatus.Available;
     }
 
     #endregion

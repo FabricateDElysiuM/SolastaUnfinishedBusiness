@@ -82,7 +82,7 @@ ModUi/&EnableDungeonMakerModdedContent=Enable Dungeon Maker Pro\n<i><color=#F0DA
 ModUi/&EnableEpicPointsAndArray=Enable an epic 35 points buy system and array <i><color=#F0DAA0>[17,15,13,12,10,8]</color></i> <b><i><color=#C04040E0>[Requires Restart]</color></i></b>
 ModUi/&EnableFeatsAtEvenLevels=Enable feats selection at class levels 2, 10 and 18
 ModUi/&EnableFeatsAtEvenLevelsMiddle=Enable feats selection at class levels 6 and 14
-ModUi/&EnableFighterWeaponSpecialization=Enable <color=#D89555>Fighter</color> <b>Weapon Specialization</b> at class levels 8 and 16 <i><color=#F0DAA0>[get +1 to hit and to damage but disadvantage with any other weapon type]</color></i>
+ModUi/&EnableFighterWeaponSpecialization=Enable <color=#D89555>Fighter</color> <b>Weapon Specialization</b> at class levels 4 and 8 <i><color=#F0DAA0>[get +1 to hit and to damage but disadvantage with any other weapon type]</color></i>
 ModUi/&EnableFlexibleBackgrounds=Enable flexible backgrounds <i><color=#F0DAA0>[select skill and tool proficiencies from backgrounds]</color></i>
 ModUi/&EnableFlexibleRaces=Enable flexible races <i><color=#F0DAA0>[assign ability score points instead of the racial defaults]</color></i>
 ModUi/&EnableHotkeyDebugOverlay=Enable <color=#1E81B0>CTRL-SHIFT-(D)</color> to display the debug overlay
@@ -94,7 +94,7 @@ ModUi/&EnableInvisibleCrownOfTheMagister=Hide the <color=#D89555>Crown of the Ma
 ModUi/&EnableLevel20=Enable level 20 <b><i><color=#C04040E0>[Requires Restart]</color></i></b>
 ModUi/&EnableLogDialoguesToConsole=Enable log dialogues to game console during narrative sequences
 ModUi/&EnableMinInOutAttributes=<i>+ Enforce ability scores minimum in & out pre-requisites</i>
-ModUi/&EnableMonkWeaponSpecialization=Enable <color=#D89555>Monk</color> <b>Weapon Specialization</b> at class levels 2 and 11 <i><color=#F0DAA0>[the selected weapon type becomes a monk weapon to you]</color></i>
+ModUi/&EnableMonkWeaponSpecialization=Enable <color=#D89555>Monk</color> <b>Weapon Specialization</b> at class levels 2 and 8 <i><color=#F0DAA0>[the selected weapon type becomes a monk weapon to you]</color></i>
 ModUi/&EnableMulticlass=Enable multiclass <b><i><color=#C04040E0>[Requires Restart]</color></i></b>
 ModUi/&EnablePcgRandom=Enable a better random generator algorithm <i><color=#F0DAA0>[https://www.pcg-random.org]</color></i>
 ModUi/&EnableRejoinParty=Enable <color=#1E81B0>CTRL-SHIFT-(R)</color> to rejoin the party around the selected hero or the leader if none is selected <i><color=#F0DAA0>[useful with parties of 5 or 6]</color></i>

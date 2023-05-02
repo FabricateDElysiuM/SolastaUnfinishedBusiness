@@ -240,7 +240,7 @@ internal static class CharacterContext
 
     internal static void SwitchMonkWeaponSpecialization()
     {
-        var levels = new[] { 2, 11 };
+        var levels = new[] { 2, 8 };
 
         if (Main.Settings.EnableMonkWeaponSpecialization)
         {
@@ -1084,7 +1084,7 @@ internal static class CharacterContext
 
     internal static void SwitchFighterWeaponSpecialization()
     {
-        var levels = new[] { 8, 16 };
+        var levels = new[] { 4, 8 };
 
         if (Main.Settings.EnableFighterWeaponSpecialization)
         {
